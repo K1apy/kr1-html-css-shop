@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Шесть повседневных товаров: бутылка, шоппер, набор зелени, щётка, бахилы и набор для пикника. Описания, цены и сравнение.">
+    <meta name="theme-color" content="#2e7d32">
+    <title>Каталог — Зелёный магазин</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="index.html">Зелёный магазин</a>
+        <p class="site-header__description">Товары для дома и повседневной жизни</p>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">О товаре</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container" id="main">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+      <section class="page-heading">
+        <h1>Каталог товаров</h1>
+        <p>Выбирайте то, чем будете пользоваться каждый день.</p>
+      </section>
+      <div class="catalog-layout">
+        <aside class="catalog-filters">
+          <h2>Категории и фильтры</h2>
+          <nav class="category-nav" aria-label="Категории товаров">
+            <a href="#everyday">В дорогу <span>03</span>
+            </a>
+            <a href="#home">Для дома <span>02</span>
+            </a>
+            <a href="#outdoor">На природу <span>01</span>
+            </a>
+            <a href="#comparison">Сравнить товары <span>↗</span>
+            </a>
+          </nav>
+          <form class="catalog-filters__form">
+            <fieldset class="catalog-filters__group">
+              <legend>Стоимость</legend>
+              <label for="price-any">
+                <input id="price-any" type="radio" name="price" value="any" checked> Любая</label>
+              <label for="price-low">
+                <input id="price-low" type="radio" name="price" value="low"> До 1 000 ₽</label>
+              <label for="price-high">
+                <input id="price-high" type="radio" name="price" value="high"> От 1 000 ₽</label>
+            </fieldset>
+            <button class="button" type="button" disabled>Применить фильтр</button>
+            <p class="catalog-filters__note">Макет фильтра для КР №1. Фильтрация появится на этапе JavaScript. Ссылки на категории уже работают.</p>
+            <button class="text-button" type="reset">Сбросить выбор</button>
+          </form>
+        </aside>
+        <div class="catalog-products">
+          <div class="catalog-products__intro">
+            <span>В каталоге 6 товаров</span>
+            <a href="#comparison">К таблице сравнения</a>
+          </div>
+          <section class="catalog-category" id="everyday">
+            <h2>В дорогу</h2>
+            <div class="products-grid products-grid--catalog">
+              <article class="product-card">
+                <a class="product-card__picture" href="product.html#bottle" tabindex="-1" aria-hidden="true">
+                  <span class="product-card__badge">Выбор недели</span>
+                  <img class="product-card__image" src="images/bottle.svg" alt="" width="600" height="500" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">В дорогу</p>
+                  <h3 class="product-card__title">
+                    <a href="product.html#bottle">Бутылка «Лес»</a>
+                  </h3>
+                  <p class="product-card__description">Матовая стальная бутылка для воды. Удобно взять на пары, прогулку или тренировку.</p>
+                  <div class="product-card__bottom">
+                    <p class="product-card__price">1 200 ₽ </p>
+                    <a class="product-card__link" href="product.html#bottle" aria-label="Подробнее: Бутылка «Лес»">Подробнее </a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card product-card--discount">
+                <a class="product-card__picture" href="product.html#bag" tabindex="-1" aria-hidden="true">
+                  <span class="product-card__badge">−20%</span>
+                  <img class="product-card__image" src="images/bag.svg" alt="" width="600" height="500" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">В дорогу</p>
+                  <h3 class="product-card__title">
+                    <a href="product.html#bag">Шоппер «Каждый день»</a>
+                  </h3>
+                  <p class="product-card__description">Хлопковая сумка с длинными ручками для продуктов, тетрадей и других вещей.</p>
+                  <div class="product-card__bottom">
+                    <p class="product-card__price">800 ₽ <del class="product-card__old-price">1 000 ₽</del>
+                    </p>
+                    <a class="product-card__link" href="product.html#bag" aria-label="Подробнее: Шоппер «Каждый день»">Подробнее </a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card">
+                <a class="product-card__picture" href="product.html#covers" tabindex="-1" aria-hidden="true">
+                  <img class="product-card__image" src="images/covers.svg" alt="" width="600" height="500" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">В дорогу</p>
+                  <h3 class="product-card__title">
+                    <a href="product.html#covers">Многоразовые бахилы</a>
+                  </h3>
+                  <p class="product-card__description">Тканевые бахилы на резинке. После использования их можно постирать.</p>
+                  <div class="product-card__bottom">
+                    <p class="product-card__price">500 ₽ </p>
+                    <a class="product-card__link" href="product.html#covers" aria-label="Подробнее: Многоразовые бахилы">Подробнее </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="catalog-category" id="home">
+            <h2>Для дома</h2>
+            <div class="products-grid products-grid--catalog">
+              <article class="product-card">
+                <a class="product-card__picture" href="product.html#kit" tabindex="-1" aria-hidden="true">
+                  <span class="product-card__badge">Новинка</span>
+                  <img class="product-card__image" src="images/kit.svg" alt="" width="600" height="500" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Для дома</p>
+                  <h3 class="product-card__title">
+                    <a href="product.html#kit">Зелень на подоконнике</a>
+                  </h3>
+                  <p class="product-card__description">Набор для выращивания базилика и мяты дома. Горшки, грунт и семена в комплекте.</p>
+                  <div class="product-card__bottom">
+                    <p class="product-card__price">2 500 ₽ </p>
+                    <a class="product-card__link" href="product.html#kit" aria-label="Подробнее: Зелень на подоконнике">Подробнее </a>
+                  </div>
+                </div>
+              </article>
+              <article class="product-card">
+                <a class="product-card__picture" href="product.html#brush" tabindex="-1" aria-hidden="true">
+                  <img class="product-card__image" src="images/brush.svg" alt="" width="600" height="500" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Для дома</p>
+                  <h3 class="product-card__title">
+                    <a href="product.html#brush">Бамбуковая щётка</a>
+                  </h3>
+                  <p class="product-card__description">Простая щётка с бамбуковой ручкой и мягкой щетиной для ежедневного ухода.</p>
+                  <div class="product-card__bottom">
+                    <p class="product-card__price">300 ₽ </p>
+                    <a class="product-card__link" href="product.html#brush" aria-label="Подробнее: Бамбуковая щётка">Подробнее </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="catalog-category" id="outdoor">
+            <h2>На природу</h2>
+            <div class="products-grid products-grid--catalog">
+              <article class="product-card">
+                <a class="product-card__picture" href="product.html#picnic" tabindex="-1" aria-hidden="true">
+                  <span class="product-card__badge">Набор на двоих</span>
+                  <img class="product-card__image" src="images/picnic.svg" alt="" width="600" height="500" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">На природу</p>
+                  <h3 class="product-card__title">
+                    <a href="product.html#picnic">Набор для пикника</a>
+                  </h3>
+                  <p class="product-card__description">Две тарелки, приборы и льняной чехол для небольшого обеда на свежем воздухе.</p>
+                  <div class="product-card__bottom">
+                    <p class="product-card__price">3 200 ₽ </p>
+                    <a class="product-card__link" href="product.html#picnic" aria-label="Подробнее: Набор для пикника">Подробнее </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <section class="section" id="comparison">
+        <div class="section__heading">
+          <div>
+            <h2>Сравнение популярных товаров</h2>
+          </div>
+        </div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Сравнение товаров; на узком экране прокручивается по горизонтали">
+          <table class="data-table">
+            <caption>Сравнение популярных товаров</caption>
+            <thead>
+              <tr>
+                <th scope="col">Что сравниваем</th>
+                <th scope="col">Бутылка «Лес»</th>
+                <th scope="col">Шоппер</th>
+                <th scope="col">Набор зелени</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Для чего</th>
+                <td>Вода с собой</td>
+                <td>Покупки и учёба</td>
+                <td>Домашний огород</td>
+              </tr>
+              <tr>
+                <th scope="row">Основной материал</th>
+                <td>Сталь</td>
+                <td>Хлопок</td>
+                <td>Терракота</td>
+              </tr>
+              <tr>
+                <th scope="row">Уход</th>
+                <td>Мыть вручную</td>
+                <td>Стирка при 30 °C</td>
+                <td>Свет и полив</td>
+              </tr>
+              <tr>
+                <th scope="row">Цена</th>
+                <td>1 200 ₽</td>
+                <td>800 ₽</td>
+                <td>2 500 ₽</td>
+              </tr>
+              <tr>
+                <th scope="row">Подробности</th>
+                <td>
+                  <a href="product.html#bottle">О бутылке</a>
+                </td>
+                <td>
+                  <a href="product.html#bag">О шоппере</a>
+                </td>
+                <td>
+                  <a href="product.html#kit">О наборе</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contacts">
+      <div class="container">
+        <p>
+          <strong>Зелёный магазин</strong> — учебный проект по HTML и CSS.</p>
+        <nav class="site-footer__nav" aria-label="Разделы главной">
+          <a href="index.html#advantages">Преимущества</a>
+          <a href="index.html#popular">Популярные товары</a>
+          <a href="index.html#faq">Вопросы и ответы</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+        <p>Киселев Максим Андреевич · ЭФБО-01-25 · 2026</p>
+        <p>Товары и условия приведены для демонстрации. Реальные покупки не выполняются.</p>
+      </div>
+    </footer>
+    <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑</a>
+  </body>
+</html>
